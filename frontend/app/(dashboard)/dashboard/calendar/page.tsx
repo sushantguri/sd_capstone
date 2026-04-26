@@ -15,8 +15,8 @@ export default function CalendarPage() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await api.get("/bookings/me");
-        setBookings(res.data);
+        const res = await api.get("/bookings?limit=100");
+        setBookings(res.data.data || []);
       } catch {
         // handle gracefully
       } finally {
