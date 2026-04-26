@@ -12,6 +12,7 @@ const ROLES = [
   { id: "STUDENT", label: "Student" },
   { id: "FACULTY", label: "Faculty" },
   { id: "ADMIN", label: "Admin" },
+  { id: "SUPER_ADMIN", label: "Super Admin" },
 ];
 
 export default function RegisterPage() {
@@ -107,7 +108,7 @@ export default function RegisterPage() {
 
             <div className="space-y-1">
               <label className="text-sm font-medium text-gray-300 ml-1">Account Role</label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {ROLES.map((r) => (
                   <button
                     key={r.id}
@@ -126,7 +127,7 @@ export default function RegisterPage() {
             </div>
 
             <AnimatePresence>
-              {role !== "SUPER_ADMIN" && (
+              {true && (
                 <motion.div 
                   initial={{ opacity: 0, height: 0, marginTop: 0 }}
                   animate={{ opacity: 1, height: "auto", marginTop: 20 }}
