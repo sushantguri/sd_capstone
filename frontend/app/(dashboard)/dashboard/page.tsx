@@ -24,8 +24,8 @@ export default function DashboardPage() {
 
     const fetchData = async () => {
       try {
-        const res = await api.get("/bookings/me");
-        setBookings(res.data);
+        const res = await api.get("/bookings?limit=100");
+        setBookings(res.data.data || []);
       } catch {
         // User might not have bookings yet
       } finally {
