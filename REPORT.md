@@ -1,5 +1,12 @@
 # Campus Resource Management System (CRMS) - Project Report
 
+**Project Team Members:**
+* Sushant
+* Krish Dabas
+* Aryan Yadav
+* Ritik Atri
+* Aditiya
+
 ## 1. Project Overview
 The **Campus Resource Management System (CRMS)** is a comprehensive, multi-tenant Software-as-a-Service (SaaS) application designed to modernize and streamline the scheduling of physical university resources (Computer Labs, Lecture Halls, Equipment). By transitioning from traditional pen-and-paper or disjointed spreadsheets to a unified digital platform, CRMS ensures that resources are allocated efficiently without double-booking or scheduling conflicts.
 
