@@ -198,6 +198,7 @@ export default function ResourcesPage() {
                   required
                   type="number"
                   min={1}
+                  max={500}
                   value={formData.capacity || ""}
                   onChange={(e) => setFormData({ ...formData, capacity: e.target.value ? parseInt(e.target.value) : ("" as any) })}
                   className="input-glass w-full px-4 py-3 rounded-xl text-sm"

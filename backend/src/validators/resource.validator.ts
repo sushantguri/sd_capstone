@@ -9,7 +9,7 @@ export const resourceCreateSchema = z.object({
   name: z.string().trim().min(1).max(255),
   type: z.string().trim().min(1).max(100),
   description: z.string().trim().min(1).max(1000).optional(),
-  capacity: z.coerce.number().int().min(1),
+  capacity: z.coerce.number().int().min(1).max(500),
   isActive: z.boolean().optional(),
 });
 
@@ -18,7 +18,7 @@ export const resourceUpdateSchema = z
     name: z.string().trim().min(1).max(255).optional(),
     type: z.string().trim().min(1).max(100).optional(),
     description: z.string().trim().min(1).max(1000).nullable().optional(),
-    capacity: z.coerce.number().int().min(1).optional(),
+    capacity: z.coerce.number().int().min(1).max(500).optional(),
     isActive: z.boolean().optional(),
   })
   .refine((value) => Object.keys(value).length > 0, {
